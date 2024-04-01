@@ -36,6 +36,15 @@ namespace Vector3f
             z += v.z;
             return *this;
         }
+
+        Vec3f operator=(const Vec3f &v)
+        {
+            x = v.x;
+            y = v.y;
+            z = v.z;
+            return *this;
+        }
+
         // Vec3f operator-(const Vec3f &other) const
         // {
         //     return Vec3f(x - other.x, y - other.y, z - other.z);
@@ -69,7 +78,7 @@ namespace Vector3f
         }
 
     }; // point3 is just an alias for Vec3f, but useful for geometric clarity in the code.
-    using point3 = Vec3f;
+    using point3f = Vec3f;
 
     // Vector Utility Functions
 
@@ -120,7 +129,7 @@ namespace Vector3f
                      u.x * v.y - u.y * v.x);
     }
 
-    inline Vec3f unit_vector(Vec3f v)
+    inline Vec3f normalize(Vec3f v)
     {
         return v / v.length();
     }
