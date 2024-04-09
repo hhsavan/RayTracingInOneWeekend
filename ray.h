@@ -15,7 +15,7 @@ namespace Ray
         ray() {}
         ray(const Vector3f::point3f &origin, const Vector3f::Vec3f &direction) : origin(origin), dir(direction) {}
 
-        Vector3f::point3f getOrigin() { return origin; }
+        Vector3f::point3f const getOrigin() { return origin; }
         Vector3f::Vec3f getDirection() { return dir; }
 
         void setOrigin(const Vector3f::point3f &org){ origin = org;}
@@ -28,6 +28,7 @@ namespace Ray
             return origin + t * dir;
         }
 
+        // Vector3f::point3f const getOrigin() { return origin;}
     private:
         Vector3f::point3f origin;
         Vector3f::Vec3f dir;

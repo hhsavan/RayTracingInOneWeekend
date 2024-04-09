@@ -42,6 +42,9 @@ Ray::ray generateRay(const Scene::camera &camera, int i, int j)
     return ray;
 }
 
+
+
+
 int main()
 {
 
