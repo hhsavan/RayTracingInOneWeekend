@@ -1,8 +1,6 @@
 
 #include <iostream>
-#include "vec3.h"
 #include "color.h"
-#include "camera.h"
 #include "parser.h"
 
 // TODO

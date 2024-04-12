@@ -1,9 +1,6 @@
 #ifndef __COLOR_H__
 #define __COLOR_H__
 
-#include "vec3.h"
-#include "ray.h"
-
 #include <iostream>
 
 using color = Vector3f::Vec3f;
@@ -17,15 +14,15 @@ void write_color(std::ostream &out, color pixeelColor)
 }
 
 
-//t2^d⋅d−2td⋅(C−Q)+(C−Q)⋅(C−Q)−r^2=0
-bool hit_sphere(const Vector3f::point3f& center, double radius, Ray::ray& r) {
-    Vector3f::Vec3f oc = center - r.getOrigin();
-    auto a = dot(r.getDirection(), r.getDirection());
-    auto b = -2.0 * dot(r.getDirection(), oc);
-    auto c = dot(oc, oc) - radius*radius;
-    auto discriminant = b*b - 4*a*c;
-    return (discriminant >= 0);
-}
+// //t2^d⋅d−2td⋅(C−Q)+(C−Q)⋅(C−Q)−r^2=0
+// bool hit_sphere(const Vector3f::point3f& center, double radius, Ray::ray& r) {
+//     Vector3f::Vec3f oc = center - r.getOrigin();
+//     auto a = dot(r.getDirection(), r.getDirection());
+//     auto b = -2.0 * dot(r.getDirection(), oc);
+//     auto c = dot(oc, oc) - radius*radius;
+//     auto discriminant = b*b - 4*a*c;
+//     return (discriminant >= 0);
+// }
 
 color ray_color(Ray::ray &r)
 {
