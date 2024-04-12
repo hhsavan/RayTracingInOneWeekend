@@ -31,8 +31,8 @@ namespace Scene
             bottom = -1;
             top = 1;
             distance = 1;
-            nx = 800;
-            ny = 400;
+            nx = 512;
+            ny = 256;
 
 
 

@@ -29,7 +29,7 @@ bool hit_sphere(const Vector3f::point3f& center, double radius, Ray::ray& r) {
 
 color ray_color(Ray::ray &r)
 {
-    if (hit_sphere(Vector3f::point3f(0, 0, -1), 0.5, r))
+    if (hit_sphere(Vector3f::point3f(0, 0, 5), 0.5, r))
         return color(1, 0, 0);
     Vector3f::Vec3f unit_direction = Vector3f::normalize(r.getDirection());
     auto a = 0.5 * (unit_direction.y + 1.0);
