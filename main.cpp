@@ -46,9 +46,12 @@ Ray::ray generateRay(const Scene::camera &camera, int i, int j)
     return ray;
 }
 
+<<<<<<< HEAD
 
 
 using namespace parser;
+=======
+>>>>>>> parent of f6f17f2 (1-parser eklendi ama tam bitmedi. ona bakılacak ve test edilecek. 2-sphere çizmee eklendi ama spherede bi saçmalık var. tam sphere şeklinde değil ona bakılması lazım)
 int main()
 {
 
